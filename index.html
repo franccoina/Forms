@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <header>
+        <h1>REGISTRO DE MASCOTAS</h1>
+    </header>
+    <main>
+        <form action="./src/pages/server.html" method="post">
+            <fieldset>
+                <legend>Datos de la Mascota</legend>
+                <div>
+                    <label for="nombre-mascota">Nombre de la Mascota</label>
+                    <input type="text" name="nombre-mascota" id="nombre-mascota" placeholder="ej: Zeus">
+                </div>
+                <div>
+                    <label for="edad-mascota">Edad de la Mascota</label>
+                    <input type="number" name="edad-mascota" id="edad-mascota" placeholder="ej: 3">
+                </div>
+                <div>
+                    <label for="operaciones-mascota">Operaciones de la Mascota</label>
+                    <input type="range" name="operaciones-mascota" id="operaciones-mascota" min="0" max="5" value="0">
+                </div>
+                <div>
+                    <label for="cumple-mascota">Cumpleaños de la Mascota</label>
+                    <input type="datetime-local" name="cumple-mascota" id="cumple-mascota">
+                </div>
+                <div>
+                    <label for="foto-mascota">Foto Local de la Mascota</label>
+                    <input type="file" name="foto-mascota" id="foto-mascota" enctype="multipart/form-data">
+                </div>
+                <div>
+                    <label for="fotolocal-mascota">Foto de la Mascota</label>
+                    <input type="url" name="fotolocal-mascota" id="fotolocal-mascota" placeholder="ej: https://">
+                </div>
+                <div>
+                    <label for="color-mascota">Color de la Mascota</label>
+                    <input type="color" name="color-mascota" id="color-mascota">
+                </div>
+                <div>
+                    <label for="comentarios-mascota">Comentarios:</label>
+                    <br>
+                    <textarea name="comentarios-mascota" id="comentarios-mascota" placeholder="Escribe aqui tus comentaios sobre la mascota..." cols="30" rows="5"></textarea>
+                </div>
+                <hr>
+                <div>
+                    <label for="caracteristicas-mascota">Caracteristicas de la Mascota:</label>
+                    <br>
+                    <span>
+                        <input type="checkbox" name="caracteristicas-mascota" id="caracteristicas-mascota">Mestizo
+                    </span>
+                    <span>
+                        <input type="checkbox" name="caracteristicas-mascota" id="caracteristicas-mascota">Pelirrojo
+                    </span>
+                    <span>
+                        <input type="checkbox" name="caracteristicas-mascota" id="caracteristicas-mascota">Raro
+                    </span>
+                    <span>
+                        <input type="checkbox" name="caracteristicas-mascota" id="caracteristicas-mascota">Raza
+                    </span>
+                    <span>
+                        <input type="checkbox" name="caracteristicas-mascota" id="caracteristicas-mascota">Medio vivo
+                    </span>
+                </div>
+                <hr>
+                <div>
+                    <label for="sexo-mascota">Sexo de la Mascota:</label>
+                    <br>
+                    <span>Hembra<input type="radio" name="sexo-mascota" id="sexo-mascota" value="Hembra"></span>
+                    <span>Macho<input type="radio" name="sexo-mascota" id="sexo-mascota" value="Macho"></span>
+                </div>
+                <button type="submit">Enviar datos</button>
+            </fieldset>
+            <fieldset>
+                <legend>Datos del Propietario</legend>
+                <div>
+                    <label for="nombre-propietario">Nombre del Propietario</label>
+                    <input type="text" name="nombre-propietario" id="nombre-propietario" placeholder="ej: Mario">
+                </div>
+                <div>
+                    <label for="apellido-propietario">Apellido del Propietario</label>
+                    <input type="text" name="nombre-propietario" id="nombre-propietario" placeholder="ej: Casas">
+                    <br>
+                </div>
+                <div>
+                    <label for="tipoid-propietario">Tipo de documento</label>
+                    
+                    <select>
+                        <option value="none" disabled selected></option>
+                        <option value="CC">Cedula de ciudadania</option>
+                        <option value="TI">Tarjeta de identidad</option>
+                        <option value="PE">Pasaporte de extranjeria</option>
+                    </select>
+
+                    <!-- <input list="tipoid-propietario">
+                        <datalist name="tipoid-propietario" id="tipoid-propietario">
+                            <option value="CC">Cedula de ciudadania</option>
+                            <option value="TI">Tarjeta de identidad</option>
+                            <option value="PE">Pasaporte de extranjeria</option>
+                        </datalist> -->
+
+                        <!-- <span>Cedula de ciudadania<input type="radio" name="nombre-propietario" id="nombre-propietario" value="cc"></span>
+                        <span>Tarjeta de identidad<input type="radio" name="nombre-propietario" id="nombre-propietario" value="ti"></span>
+                        <span>Pasaporte de extranjeria<input type="radio" name="nombre-propietario" id="nombre-propietario" value="pe"></span> -->
+                </div>
+                <div>
+                    <label for="id-propietario">ID del Propietario</label>
+                    <input type="text" name="id-propietario" id="id-propietario" placeholder="ej: 123456789">
+                </div>
+                <div>
+                    <label for="tel-propietario">TEL del Propietario</label>
+                    <input type="tel" name="tel-propietario" id="tel-propietario" placeholder="ej: 123456789" value="+57 ">
+                </div>
+                <div>
+                    <label for="correo-propietario">Correo del Propietario</label>
+                    <input type="email" name="correo-propietario" id="correo-propietario" placeholder="ej: mcasas@example.com">
+                </div>
+                <button type="submit">Enviar datos</button>
+            </fieldset>
+        </form>
+        
+    </main>
+    <footer></footer>
+</body>
+</html>
